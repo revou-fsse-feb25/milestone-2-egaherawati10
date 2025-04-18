@@ -55,6 +55,16 @@
             min-height: 160px;
         }
 
+        h1 {
+            font-family: "Roboto", sans-serif;
+            color: #2a495b;
+            text-align: center;
+            align-items: center;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            margin-block: 2rem 2rem;
+        }
+
         #clicker {
             margin: 20px 0;
         }
