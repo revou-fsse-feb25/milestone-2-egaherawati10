@@ -7,13 +7,10 @@
 
 body {
     font-family: "Roboto", sans-serif;
-    color: white;
     margin: 0;
     background: url("../EggDrop.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 120vh;
 }
 
 ::-webkit-scrollbar {
@@ -110,7 +107,7 @@ section {
     grid-template-columns: max-content;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    text-align: center;
     overflow-x: hidden;
     height: max-content;
     min-height: 100px;
@@ -128,7 +125,6 @@ section h1 {
     align-items: center;
     font-size: 1.5rem;
     line-height: 2rem;
-    margin-block: 2rem 2rem;
 }
 
 section h2 {
@@ -136,7 +132,6 @@ section h2 {
     color: #2a495b;
     font-size: 1rem;
     line-height: 2rem;
-    margin-block: 2rem 2rem;
 }
 
 section p {

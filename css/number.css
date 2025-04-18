@@ -28,6 +28,24 @@
             background-size: cover;
         }
 
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb { 
+            background: #2a495b;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background:  #2a495b;
+        }
+        
         main {
             font-family: "Roboto", sans-serif;
             color: black;
