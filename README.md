@@ -30,14 +30,14 @@ This is an overview of EggDrop Games website. The features, tech stacks, and dem
 
 1. Clone this repository below to your local repository
 
-> https://github.com/revou-fsse-feb25/milestone-1-egaherawati10.git
+> https://github.com/revou-fsse-feb25/milestone-2-egaherawati10.git
 
 2. Open 'index.html' file in a browser
 
 
 ## Deployed Website :
 
-> Github Pages: 
+> Github Pages: https://revou-fsse-feb25.github.io/milestone-2-egaherawati10/
 
 
 ## Previews
