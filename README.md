@@ -40,7 +40,16 @@ This is an overview of EggDrop Games website. The features, tech stacks, and dem
 > Github Pages: 
 
 
-## Demo
+## Previews
+
+Rock, Paper, Scissors
+![alt text](image-1.png)
+
+Number Guessing
+![alt text](image-2.png)
+
+Clicker
+![alt text](image.png)
 
 
 ## Creator

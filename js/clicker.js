@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let clickValue = 1;
     const scoreElement = document.getElementById("score");
     const clickButton = document.getElementById("click-button");
-    const colors = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF", "#FFA500", "#800080", "#FFC0CB", "#808080"];
+    const colors = ["#2a495b", "#b1b2b3", "#cef4f6", "#d1cceb"];
+    const reloadBtn = document.querySelector('.reload');
 
     function updateScore() {
         scoreElement.textContent = `Points: ${score}`;
@@ -15,14 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         createClickEffect(event.clientX, event.clientY);
     })
 
-    var click = 0;
-    var outOfTime = false;
-    function clicker() {
-        if(!outOfTime) {
-            click+=1;
-            document.getElementById("score").innerHTML = "Points: " + click;
-    }}
-
+    
     var time = 30;
     var timer= setInterval(function() {
         time--;
@@ -59,6 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.appendChild(effect);
         setTimeout(() => document.body.removeChild(effect), 500);
 }
+
+reloadBtn.innerText = 'Play Again';
+reloadBtn.style.display = 'flex';
+reloadBtn.addEventListener('click', () => {
+    window.location.reload();})
 
 updateScore();
 })

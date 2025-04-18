@@ -1,4 +1,4 @@
-let y = Math.floor(Math.random() * 100) + 1;
+let y = Math.floor(Math.random() * 50) + 1;
 let guess = 1;
 
 document.getElementById("submitguess").onclick = function () {

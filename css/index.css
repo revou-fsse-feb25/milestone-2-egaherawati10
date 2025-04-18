@@ -12,6 +12,8 @@ body {
     background: url("../EggDrop.png");
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
+    height: 120vh;
 }
 
 ::-webkit-scrollbar {
@@ -23,48 +25,85 @@ body {
 }
 
 ::-webkit-scrollbar-thumb { 
-    background: #dafeff;
-    border-radius: 12px;
+    background: #2a495b;
+    border-radius: 4px;
     transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background:  #dafeff;
+    background:  #2a495b;
 }
 
-        header {
-            width: 100%;
-        }
+header {
+    width: 100%;
+}
 
-        .navlist a {
-            text-decoration: none;
-        }
+nav{
+    width: 100%;
+    height: 10vh;
+}
+        
+.navlist {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
 
-        .logo {
-            color: whitesmoke;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
+.navlist a {
+    text-decoration: none;
+}
 
-        .logo span {
-            color: #2a495b;
-            text-shadow: 0 0 5px #2a495b;
-        }
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
 
-        main {
-            font-family: "Roboto", sans-serif;
-            color: black;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
+.nav-items a {
+    position: relative;
+    font-size: 1.2rem;
+    color: #2a495b;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
 
-        main a {
-            color: #2a495b;
-            text-decoration: none;
-        }
+.nav-items a::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #2a495b;
+    text-shadow: 0 0 5px #2a495b;
+    transition: 0.2s linear;
+}
+
+.nav-items a:Hover::before {
+    width: 100%;
+    text-shadow: 0 0 5px #2a495b;
+}
+
+.nav-items a:hover {
+    color: #2a495b;
+    text-shadow: 0 0 5px #2a495b;
+}
+
+.logo {
+    color: whitesmoke;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #2a495b;
+    text-shadow: 0 0 5px #2a495b;
+}
 
 section {
     display: grid;
@@ -73,11 +112,16 @@ section {
     justify-content: center;
     width: 100%;
     overflow-x: hidden;
-    height: 90vh;
-    gap: 10px;
+    height: max-content;
+    min-height: 100px;
 }
 
-h1 {
+section a {
+    color: #2a495b;
+    text-decoration: none;
+}
+
+section h1 {
     font-family: "Roboto", sans-serif;
     color: #2a495b;
     text-align: center;
@@ -87,14 +131,67 @@ h1 {
     margin-block: 2rem 2rem;
 }
 
+section h2 {
+    font-family: "Roboto", sans-serif;
+    color: #2a495b;
+    font-size: 1rem;
+    line-height: 2rem;
+    margin-block: 2rem 2rem;
+}
+
+section p {
+    color: #2a495b;
+}
+
+section .games {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.rock, .number, .clicker {
+    width: 130px;
+    height: 160px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    align-content: center;
+    background:whitesmoke;
+    box-shadow:10px 10px 10px 0 #b1b2b3;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+.rock:hover, .number:hover, .clicker:hover {
+    text-shadow: #2a495b 0 0 5px;
+}
+
+footer {
+    width: 100%;
+    height: 2.8rem;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #2a495b;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
 .social-links i{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 2rem;
-    height: 2rem;
+    width: 1.6rem;
+    height: 1.6rem;
     background-color: transparent;
-    border: 0.2rem solid #2a495b;
+    border: 0.25rem solid #2a495b;
     position: relative;
     border-radius: 50%;
     color: #2a495b;
@@ -111,16 +208,3 @@ h1 {
     filter: drop-shadow(0 0 10px #2a495b);
 }
 
-footer {
-    width: 100%;
-    height: 2.8rem;
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: #2a495b;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
