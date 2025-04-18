@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+        header {
+            width: 100%;
+        }
+
+        .navlist a {
+            text-decoration: none;
+        }
+
+        .logo {
+            color: whitesmoke;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #2a495b;
+            text-shadow: 0 0 5px #2a495b;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            color: white;
+            margin: 0;
+            background: url("../EggDrop.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        main {
+            font-family: "Roboto", sans-serif;
+            color: black;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 85vh;
+        }

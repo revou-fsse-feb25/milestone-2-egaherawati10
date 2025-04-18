@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+        header {
+            width: 100%;
+        }
+
+        .navlist a {
+            text-decoration: none;
+        }
+
+        .logo {
+            color: whitesmoke;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: rgb(42, 73, 91);
+            text-shadow: 0 0 5px #2a495b;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            color: black;
+            margin: 0;
+            background: url("../EggDrop.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        main {
+            font-family: "Roboto", sans-serif;
+            background-color: #cef4f6;
+            color: black;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 85vh;
+        }
+
+        .game {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title {
+            position: relative;
+            top: 0;
+            font-size: 4rem;
+            z-index: 2;
+        }
+
+        .score {
+            display: flex;
+            width: 30vw;
+            justify-content: space-evenly;
+            position: absolute;
+            top: 70px;
+            z-index: 1;
+        }
+
+        .p-count, .c-count {
+            font-size: 2rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .options {
+            display: flex;
+            width: 30vw;
+            justify-content: space-evenly;
+            margin-top: 2rem;
+        }
+
+        .rock, .paper, .scissors {
+            padding: 1rem;
+            width: 100px;
+            border-radius: 10px;
+            background: whitesmoke;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .move {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .reload {
+            display: none;
+            margin-top: 2rem;
+            padding: 1rem;
+            width: 100px;
+            border-radius: 10px;
+            background:#2a495b;
+            outline: none;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        @media screen and (max-width: 600px) {
+            .title {
+                font-size: 2rem;
+                text-align: center;
+            }
+            .score {
+                position: absolute;
+                top: 200px;
+                width: 100vw;
+            }
+            .options {
+                width: 100vw;
+            }
+        }
