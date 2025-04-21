@@ -1,31 +1,103 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-        header {
-            width: 100%;
-        }
+header {
+    width: 100%;
+    height: 10vh;
+    background-color: pink;
+    position:relative;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.08), 0 4px 6px 0 rgba(0, 0, 0, 0.12);
+}
 
-        .navlist a {
-            text-decoration: none;
-        }
+nav{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+        
+.navlist {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+}
 
-        .logo {
-            color: whitesmoke;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
+.navlist a {
+    text-decoration: none;
+    margin: 0;
+}
 
-        .logo span {
-            color: #2a495b;
-            text-shadow: 0 0 5px #2a495b;
-        }
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: whitesmoke;
+    margin: 0;
+    width:60%;
+    height: 20%;
+    border: 5px inset grey;
+    border-radius: 10px;
+    background-color: #6096b5;
+    padding: 4px;
+}
+
+.logo:hover {background-color: #2a495b}
+
+.logo:active {
+      background-color: #487a97;
+      box-shadow: 2px 2px 0 0 #2a495b;
+      transform: translateY(2px);
+    }
+
+    .nav-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    .nav-items a {
+        position: relative;
+        font-size: 1.2rem;
+        color: #2a495b;
+        margin: 0 20px;
+        text-decoration: none;
+        font-weight: 550;
+        transition: 0.3s linear;
+    }
+    
+    .nav-items a::before {
+        position: absolute;
+        content: "";
+        bottom: -3px;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background-color: #2a495b;
+        text-shadow: 0 0 5px #2a495b;
+        transition: 0.2s linear;
+    }
+    
+    .nav-items a:Hover::before {
+        width: 100%;
+        text-shadow: 0 0 5px #2a495b;
+    }
+    
+    .nav-items a:hover {
+        color: whitesmoke;
+        text-shadow: 0 0 5px #2a495b;
+    }
 
         body {
             font-family: "Roboto", sans-serif;
             color: white;
             margin: 0;
-            background: url("../EggDrop.png");
-            background-repeat: no-repeat;
-            background-size: cover;
+            background-color: #cef4f6;
         }
 
         ::-webkit-scrollbar {
