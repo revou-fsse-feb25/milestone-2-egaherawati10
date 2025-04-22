@@ -1,93 +1,174 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+    text-decoration: none;
+    scroll-behavior:smooth;
+    font-family: "Lobster Two", sans-serif;
+}
 
-        header {
-            width: 100%;
-        }
+::-webkit-scrollbar {
+    width: 10px;
+}
 
-        .navlist a {
-            text-decoration: none;
-        }
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
 
-        .logo {
-            color: whitesmoke;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
+::-webkit-scrollbar-thumb { 
+    background: #6096b5;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
 
-        .logo span {
-            color: rgb(42, 73, 91);
-            text-shadow: 0 0 5px #2a495b;
-        }
+::-webkit-scrollbar-thumb:hover {
+    background:  #2a495b;
+}
 
-        body {
-            font-family: "Roboto", sans-serif;
-            color: black;
-            margin: 0;
-            background: url("../EggDrop.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+head {
+    width: 100%;
+    height: 10vh;
+}
 
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
+header {
+    width: 100%;
+    height: 10vh;
+    background-color: #487a97;
+    position:relative;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.08), 0 4px 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+nav{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
         
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        
-        ::-webkit-scrollbar-thumb { 
-            background: #2a495b;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background:  #2a495b;
-        }
-        
-        main {
-            font-family: "Roboto", sans-serif;
-            background-color: #cef4f6;
-            color: black;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 85vh;
-        }
+.navlist {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+}
 
-        .game {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            width: 100vw;
-            justify-content: center;
-            align-items: center;
-        }
+.navlist a {
+    text-decoration: none;
+    margin: 0;
+}
 
-        .title {
-            position: relative;
-            top: 0;
-            font-size: 4rem;
-            z-index: 2;
-        }
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
 
-        .score {
-            display: flex;
-            width: 30vw;
-            justify-content: space-evenly;
-            position: absolute;
-            top: 70px;
-            z-index: 1;
-        }
+.nav-items a {
+    position: relative;
+    font-size: 1.2rem;
+    color: #ddf2ff;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
 
-        .p-count, .c-count {
-            font-size: 2rem;
-            text-align: center;
-            margin-top: 1rem;
-        }
+.nav-items a::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #ddf2ff;
+    text-shadow: 0 0 5px #2a495b;
+    transition: 0.2s linear;
+}
+
+.nav-items a:Hover::before {
+    width: 100%;
+    text-shadow: 0 0 5px #2a495b;
+}
+
+.nav-items a:hover {
+    color: whitesmoke;
+    text-shadow: 0 0 5px #2a495b;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ddf2ff;
+    margin: 0;
+    width:60%;
+    height: 20%;
+    border: 5px inset grey;
+    border-radius: 10px;
+    background-color: #6096b5;
+    padding: 4px;
+}
+
+.logo:hover {background-color: #2a495b}
+
+.logo:active {
+    background-color: #487a97;
+    box-shadow: 2px 2px 0 0 #2a495b;
+    transform: translateY(2px);
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    background-color: #ddf2ff;
+    color: #2a495b;
+}
+
+main {
+    font-family: "Archivo", sans-serif;
+    background-color: #6096b5;
+    color: #2a495b;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    position: relative;
+    top: 0;
+    font-size: 4rem;
+    z-index: 2;
+}
+
+.score {
+    display: flex;
+    width: 30vw;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 70px;
+    z-index: 1;
+}
+
+.p-count, .c-count {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
 
         .options {
             display: flex;
@@ -97,6 +178,7 @@
         }
 
         .rock, .paper, .scissors {
+            font-size: 1.2rem;
             padding: 1rem;
             width: 100px;
             border-radius: 10px;
@@ -107,12 +189,31 @@
             color: whitesmoke;
         }
 
+        .rock:hover, .paper:hover, .scissors:hover {
+            background-color: #487a97;
+        }
+
+        .rock:active, .paper:active, .scissors:active {
+            background-color: #487a97;
+            box-shadow: 5px 5px 0 0 #2a495b;
+            transform: translateY(2px);
+        }
+        
         .move {
-            font-size: 2rem;
-            font-weight: bold;
+            font-family: "Archivo", sans-serif;
+            font-size: 1.2rem;
+            font-weight:400;
+            margin: 20px 0 20px 0;
+        }
+
+        .movesleft {
+            font-family: "Archivo", sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
         }
 
         .reload {
+            font-size: 1rem;
             display: none;
             margin-top: 2rem;
             padding: 1rem;
@@ -121,9 +222,18 @@
             background:#2a495b;
             color: whitesmoke;
             outline: none;
-            border-radius: 10px;
             border: none;
             cursor: pointer;
+        }
+
+        .reload:hover {
+            background-color: #487a97;
+        }
+
+        .reload:active {
+            background-color: #487a97;
+            box-shadow: 5px 5px 0 0 #2a495b;
+            transform: translateY(2px);
         }
 
         .result {
@@ -133,16 +243,17 @@
 
         footer {
             width: 100%;
-            height: 2.8rem;
             position: relative;
             bottom: 0;
+            background-color: #487a97;
             display: flex;
-            flex-direction: row;
+            flex-direction: space-between;
             justify-content: center;
             align-items: center;
-            color: #2a495b;
+            color: #ddf2ff;
             font-size: 0.8rem;
             font-weight: 600;
+            box-shadow: 10px 8px 10px 6px rgba(0, 0, 0, 0.08), 8px 6px 6px 6px rgba(0, 0, 0, 0.12);
         }
         
         .social-links i{
@@ -152,34 +263,19 @@
             width: 1.6rem;
             height: 1.6rem;
             background-color: transparent;
-            border: 0.25rem solid #2a495b;
+            border: 0.25rem solid #ddf2ff;
             position: relative;
             border-radius: 50%;
-            color: #2a495b;
+            color: #ddf2ff;
             margin: 1rem;
             font-size: 1.2rem;
             transition: 0.2s linear;
         }
         
         .social-links i:hover {
-            scale: 1.3;
-            color: black;
-            background-color: #2a495b;
+            scale: 1.4;
+            color: #487a97;
+            background-color: whitesmoke;
             border: #2a495b;
-            filter: drop-shadow(0 0 10px #2a495b);
-        }
-        
-        @media screen and (max-width: 600px) {
-            .title {
-                font-size: 2rem;
-                text-align: center;
-            }
-            .score {
-                position: absolute;
-                top: 200px;
-                width: 100vw;
-            }
-            .options {
-                width: 100vw;
-            }
+            filter: drop-shadow(0 0 10px whitesmoke);
         }
