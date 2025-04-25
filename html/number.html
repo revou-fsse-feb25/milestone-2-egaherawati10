@@ -18,7 +18,7 @@
             <div class="nav-items"><a href="../index.html#home">Home</a></div>
             <div class="nav-items"><a href="../index.html#about">About</a></div>
             <div class="nav-items"><a href="../index.html#ourGames">Games</a></div>
-            <div class="nav-items"><a href="../index.html#footer">Contacts</a></div>
+            <div class="nav-items"><a href="#footer">Contacts</a></div>
         </ul>
     </header>
     <main>
@@ -30,12 +30,13 @@
                 Enter a guess:
             </label>
 
-            <input type="text" id="guessField" class="guessField">
+            <input type="number" id="number" class="guessField" placeholder="Enter your guess">
 
-            <input type="submit" value="Submit guess" class="guessSubmit" id="submitguess">
+            <button type="submit" value="Submit guess" class="submitguess" id="submitguess">Submit guess</button>
         </div>
+        <p id="result"></p>
     </main>
-    <footer>
+    <footer id="footer">
         <p>Life's so much fun with playing games</p>
             <div class="social-links">
                 <a href="https://github.com/egaherawati10">
